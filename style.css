@@ -1,8 +1,9 @@
 /* shared styles */
-header{
-    background-color: #FFFFFF;
-    padding-left: 120px;
-    padding-right: 120px;
+header,
+main {
+  background-color: #ffffff;
+  padding-left: 120px;
+  padding-right: 120px;
 }
 .poppins-font {
   font-family: "Poppins", sans-serif;
@@ -10,66 +11,132 @@ header{
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Nav bar */
 
-.nav-bar-header{
-    font-size:1.5rem ;
-    font-weight: 700;
-    color: #3A3A3A;
+.nav-bar-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3a3a3a;
 }
-.nav-bar{
+.responsive-html {
+  display: none;
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-bar-link > a {
+  text-decoration: none;
+  color: #3a3a3a;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 34px;
+}
+.nav-bar-link > i {
+  size: 2rem;
+  margin-right: 34px;
+}
+.banner-header {
+  font-size: 3.25rem;
+  font-weight: 700;
+  color: #3a3a3a;
+  margin-top: 145px;
+}
+.banner-description {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3a3a3a;
+  margin-top: 16px;
+}
+.banner-button {
+  background-color: #e02c6d;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 41px;
+  color: white;
+  padding: 10px 14px 10px 24px;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+}
+.banner-page-part2 {
+  background-image: url("./images/Circle\ design.svg");
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: center;
+  width: 475px;
+  height: 475px;
+  margin-top: 50px;
+}
+.banner-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* sponsors */
+.sponsors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 2px solid transparent;
+  border-image: linear-gradient(
+    rgba(192, 204, 218, 0.1),
+    rgba(192, 204, 218, 0.6),
+    rgba(192, 204, 218, 0.1)
+  );
+  border-image-slice: 1;
+  padding: 36px 62px;
+  /* margin-left: 165px;
+    margin-right: 165px; */
+  margin-top: 69px;
+}
+
+/* for mobile device */
+@media screen and (max-width: 576px) {
+  .banner-page {
+    flex-direction: column-reverse;
+  }
+  .banner-page-part2 {
+    width: 257px;
+    height: 257px;
+    background-size: cover;
+    text-align: center;
+  }
+  .banner-page-part2 > img {
+    width: 202px;
+    height: 190px;
+    margin-top: 51px;
+  }
+  .responsive-html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.nav-bar-link > a{
-    text-decoration: none;
-    color: #3A3A3A;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-right: 34px;
-}
-.nav-bar-link > i{
-    size: 2rem;
-    margin-right:34px ;
-}
-.banner-header{
-    font-size: 3.25rem;
-    font-weight: 700;
-    color: #3A3A3A;
-    margin-top: 145px;
-}
-.banner-description{
-    font-size: 1rem;
-    font-weight: 600;
-    color: #3A3A3A;
-    margin-top: 16px;
-}
-.banner-button{
-    background-color: #E02C6D;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 41px;
-    color: white;
-    padding:10px 14px  10px 24px;
-    border: none;
-    cursor: pointer;
-    margin-top: 16px;
-}
-.banner-page-part2{
-    background-image: url('./images/Circle\ design.svg');
-    background-repeat: no-repeat;
-    /* background-size: cover; */
-    background-position: center;
-    width: 475px;
-    height: 475px;
-    margin-top: 50px;
-}
-.banner-page{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+  }
+
+  .nav-bar {
+    display: none;
+  }
+  header,main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .banner-page-part2 {
+    margin-top: 15px;
+  }
+  .banner-header {
+    margin-top: 15px;
+  }
+
+  .sponsors{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 32px;
+  }
+  .sponsors>img{
+    width: 34px;
+    height: 20px;
+  }
 }
