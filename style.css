@@ -1,15 +1,39 @@
 /* shared styles */
-header,
-main {
+header {
   background-color: #ffffff;
   padding-left: 120px;
   padding-right: 120px;
+}
+.sponsors1{
+    padding-left: 120px;
+  padding-right: 120px;
+}
+.collection-section{
+    padding-left: 196px;
+    padding-right: 196px;
+    
 }
 .poppins-font {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -92,8 +116,59 @@ main {
   /* margin-left: 165px;
     margin-right: 165px; */
   margin-top: 69px;
+  margin-bottom: 100px;
 }
+/* collection section */
+.collection-card{
+    width: 300px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    padding: 17px 15px;
+}
+.collection-section1{
+    text-align: center;
+}
+.collection-header1{
+    font-size:1.8rem ;
+    font-weight: 600;
+    color:#3A3A3A ;
+}
+.collection-header2{
+    font-size:1.8rem ;
+    font-weight: 500;
+    color:black ;
+    margin-top: 16px;
+}
+.collection-header3{
+    font-size:1.5rem ;
+    font-weight: 400;
+    color:black ;
+    margin-top: 16px;
+}
+.collection-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.collection-header4,.collection-description{
+    font-size:0.9rem ;
+    font-weight: 700;
+    color:#5E6366 ;
+    margin-top: 0px;
+}
+.star-sticker>i{
+    color: #FB8200;
+    width: 1rem;
+    height: 1rem;
+}
+.star-container{
+    display: flex;
+    gap: 8px;
+    align-items: center;
 
+    
+}
 /* for mobile device */
 @media screen and (max-width: 576px) {
   .banner-page {
@@ -135,8 +210,21 @@ main {
     grid-template-columns: repeat(4,1fr);
     gap: 32px;
   }
+  .sponsors1{
+    padding-left: 42px;
+    padding-right: 42px;
+  }
   .sponsors>img{
     width: 34px;
     height: 20px;
   }
+  .collection-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 30px;
+}
+ .collection-section{
+    padding-left: 15px;
+    padding-right: 15px;
+ }
 }
